@@ -7,7 +7,7 @@ if(jQuery('#services-carousel').length){
       dots: true,
       autoplay: false,
       appendDots: '.services .slider-dots',
-      respondTo: 'slider',
+      respondTo: 'window',
       responsive: [
         {
             breakpoint: 992,
@@ -34,7 +34,7 @@ if(jQuery('#portfolio').length){
         dots: true,
         autoplay: false,
         appendDots: '.portfolio .slider-dots',
-        respondTo: 'slider',
+        respondTo: 'window',
         responsive: [
           {
               breakpoint: 992,
@@ -61,7 +61,7 @@ if(jQuery('#reviews-carousel').length){
         dots: true,
         autoplay: false,
         appendDots: '.reviews .slider-dots',
-        respondTo: 'slider',
+        respondTo: 'window',
         responsive: [
           {
               breakpoint: 992,
@@ -88,7 +88,7 @@ if(jQuery('#blog-post-carousel').length){
         dots: true,
         autoplay: false,
         appendDots: '.blog-post .slider-dots.dark',
-        respondTo: 'slider',
+        respondTo: 'window',
         responsive: [
           {
               breakpoint: 992,
@@ -105,4 +105,54 @@ if(jQuery('#blog-post-carousel').length){
       ]
     });
 }
-  
+
+const header = document.querySelector('.page-header');
+const menuToggle = document.querySelector('.header-menu-toggle');
+
+if (header && menuToggle) {
+    const mobileMenu = window.matchMedia('(max-width: 767px)');
+
+    function closeMenu() {
+        header.classList.remove('menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+    }
+
+    menuToggle.addEventListener('click', function () {
+        const isOpen = header.classList.toggle('menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    header.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (mobileMenu.matches && header.classList.contains('menu-open')) {
+                closeMenu();
+                menuToggle.focus({ preventScroll: true });
+            }
+        });
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && header.classList.contains('menu-open')) {
+            closeMenu();
+            menuToggle.focus({ preventScroll: true });
+        }
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!header.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    mobileMenu.addEventListener('change', function () {
+        const focusedElement = document.activeElement;
+        closeMenu();
+
+        if (header.contains(focusedElement)) {
+            const focusTarget = mobileMenu.matches ? menuToggle : header.querySelector('.header-logo a');
+            focusTarget.focus({ preventScroll: true });
+        }
+    });
+}

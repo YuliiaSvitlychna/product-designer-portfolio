@@ -86,6 +86,7 @@
 
         &-actions {
             display: inline-flex;
+            width: max-content;
             align-items: center;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -117,6 +118,7 @@
                     border-radius: 60px;
                     display: inline-flex;
                     align-items: center;
+                    flex-shrink: 0;
                     border: 1px solid $color-border-cta;
                     box-shadow: 0 0 0 rgba($color-accent, 0);
 
@@ -131,6 +133,8 @@
                     }
 
                     img, svg {
+                        flex-shrink: 0;
+                        margin-left: 8px;
                         transition: transform 0.3s ease;
                     }
                 }
@@ -951,13 +955,6 @@
             }
           }
 
-        //   @media (max-width: 768px) {
-        //     .achievements {
-        //       flex-direction: column;
-        //       align-items: flex-start;
-        //       gap: 16px;
-        //     }
-        //   }
     }
 
     .ticker {
@@ -1006,9 +1003,12 @@
         &__group {
             display: flex;
             align-items: center;
-            gap: 32px;
             padding-right: 32px;
             flex-shrink: 0;
+
+            > :not(:last-child) {
+                margin-right: 32px;
+            }
         
             span {
                 font-size: 32px;
@@ -1240,10 +1240,196 @@
         }
     }
 
-    @media screen and (max-width: 991px) {
-        .services {
-            padding: 80px 24px 40px 24px;
+    @media screen and (max-width: 1200px) {
+        .hero {
+            h1 {
+                font-size: 72px;
+
+                &::before {
+                    left: 80px;
+                    width: 56px;
+                    height: 54px;
+                }
+            }
+
+            .half-circle {
+                width: 700px;
+                height: 350px;
+            }
+
+            &-avatar .girl-image {
+                width: 100%;
+                max-width: 820px;
+                height: auto;
+            }
+        }
+
+        .services,
+        .reviews {
+            padding: 80px 0 50px;
             min-height: 0;
+        }
+
+        .services-text,
+        .reviews-text {
+            margin-bottom: 60px;
+        }
+
+        .experience,
+        .why-choose-me,
+        .portfolio,
+        .project-idea,
+        .blog-post {
+            padding: 80px 0;
+        }
+
+        .experience,
+        .why-choose-me,
+        .portfolio,
+        .project-idea {
+            h2 {
+                font-size: 48px;
+            }
+        }
+
+        .experience {
+            h2 {
+                margin-bottom: 60px;
+            }
+
+            .timeline {
+                h3 {
+                    font-size: 32px;
+                }
+
+                &-left {
+                    padding-right: 60px;
+                }
+
+                &-right {
+                    padding-left: 60px;
+                }
+            }
+        }
+
+        .why-choose-me {
+            .container {
+                align-items: center;
+            }
+
+            &-content {
+                padding-left: 24px;
+
+                &__bottom .item-1 {
+                    margin-right: 40px;
+                }
+
+                &__text {
+                    margin-bottom: 40px;
+                }
+            }
+
+            .cta {
+                padding: 24px 40px;
+                font-size: 26px;
+            }
+        }
+
+        .portfolio {
+            h2 {
+                max-width: 65%;
+            }
+
+            h4 {
+                font-size: 36px;
+            }
+
+            .tags-list {
+                justify-content: center;
+                margin: 32px auto 20px;
+            }
+
+            .tag-item {
+                margin-bottom: 12px;
+                padding: 12px 24px;
+                font-size: 18px;
+            }
+        }
+
+        .blog-post {
+            min-height: 0;
+
+            &-card {
+                &__link {
+                    width: 84px;
+                    height: 84px;
+                }
+
+                &__meta {
+                    font-size: 16px;
+                }
+
+                &__title {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .hero {
+            padding-top: 40px;
+
+            h1 {
+                font-size: 56px;
+
+                &::before {
+                    left: 24px;
+                    width: 40px;
+                    height: 38px;
+                }
+            }
+
+            .half-circle {
+                width: 100%;
+                max-width: 600px;
+                height: auto;
+                aspect-ratio: 2;
+                margin-top: 32px;
+            }
+
+            &-avatar {
+                margin-top: 96px;
+
+                .girl-image {
+                    max-width: 640px;
+                }
+            }
+
+            &-actions {
+                bottom: 32px;
+
+                .btn {
+                    font-size: 20px;
+
+                    &-primary {
+                        padding: 12px 24px;
+                    }
+                }
+            }
+        }
+
+        .services {
+            padding-bottom: 40px;
+
+            &-text {
+                flex-direction: column;
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+            }
     
             .services-card__header {
                 margin-bottom: 90px;
@@ -1263,11 +1449,188 @@
                 height: 84px;
             }
         }
+
+        .experience,
+        .why-choose-me,
+        .portfolio,
+        .project-idea,
+        .blog-post {
+            padding: 64px 0;
+        }
+
+        .experience,
+        .why-choose-me,
+        .portfolio,
+        .project-idea {
+            h2 {
+                font-size: 40px;
+            }
+        }
+
+        .experience .timeline {
+            h3 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            &-left {
+                padding-right: 40px;
+            }
+
+            &-right {
+                padding-left: 40px;
+            }
+        }
+
+        .why-choose-me {
+            .container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            &-avatar {
+                max-width: 420px;
+                width: 100%;
+                margin-top: 40px;
+            }
+
+            &-content {
+                max-width: 100%;
+                width: 100%;
+                padding-left: 0;
+            }
+
+            h2,
+            p {
+                margin-bottom: 32px;
+            }
+        }
+
+        .reviews {
+            padding: 64px 0;
+
+            &-text {
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            &-card {
+                &__name {
+                    font-size: 20px;
+                }
+
+                &__position,
+                &__text {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .project-idea {
+            .subscribe-form__input {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .achievements {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 24px;
+
+                &__item {
+                    margin: 8px 12px;
+                }
+            }
+        }
+
+        .blog-post h2 {
+            font-size: 40px;
+        }
     }
 
     @media screen and (max-width: 767px) {
+        .hero {
+            padding-top: 32px;
+
+            p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 40px;
+                line-height: 1.15;
+                margin-bottom: 24px;
+
+                &::before {
+                    left: 0;
+                    width: 28px;
+                    height: 27px;
+                }
+            }
+
+            .half-circle {
+                max-width: 440px;
+            }
+
+            &-avatar {
+                margin-top: 48px;
+
+                .girl-image {
+                    max-width: 440px;
+                }
+            }
+
+            &-actions {
+                bottom: 20px;
+                padding: 6px;
+                white-space: nowrap;
+
+                .btn {
+                    font-size: 16px;
+
+                    &-primary {
+                        padding: 10px 16px;
+
+                        img {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+
+                    &-link {
+                        padding: 10px 12px;
+                    }
+                }
+            }
+        }
+
+        .services,
+        .reviews {
+            border-radius: 32px;
+        }
+
         .services {
-            padding: 60px 16px 32px 16px;
+            padding: 48px 0 32px;
+
+            &-text {
+                margin-bottom: 32px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
 
             .services-card__header {
                 margin-bottom: 70px;
@@ -1278,16 +1641,304 @@
             }
     
             .services-card__link {
-                width: 64px;
-                height: 64px;
+                width: 84px;
+                height: 84px;
     
                 .icon {
-                    width: 28px;
+                    width: 100%;
                 }
             }
     
             .slider-dots {
                 margin-top: 28px;
+            }
+        }
+
+        .experience,
+        .why-choose-me,
+        .portfolio,
+        .project-idea,
+        .blog-post {
+            padding: 48px 0;
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 32px;
+            }
+        }
+
+        .experience {
+            .timeline {
+                &::before {
+                    left: 18px;
+                }
+
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.5;
+                    margin-bottom: 0;
+                }
+
+                &-item {
+                    flex-direction: column;
+                    padding-left: 52px;
+                    margin-bottom: 32px;
+                }
+
+                &-left,
+                &-right {
+                    width: 100%;
+                    padding: 0;
+                    text-align: left;
+                }
+
+                &-left {
+                    margin-bottom: 16px;
+                }
+
+                &-marker {
+                    left: 18px;
+                    width: 36px;
+                    height: 36px;
+
+                    &::after {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+        .why-choose-me {
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 24px;
+            }
+
+            h3 {
+                font-size: 28px;
+            }
+
+            &-content {
+                &__bottom {
+                    > div {
+                        width: 50%;
+                    }
+
+                    .item-1 {
+                        margin-right: 16px;
+                    }
+                }
+
+                &__text {
+                    font-size: 16px;
+                    margin-bottom: 24px;
+                }
+            }
+
+            &-avatar {
+                max-width: 320px;
+                margin-top: 32px;
+            }
+
+            .cta {
+                padding: 16px 32px;
+                font-size: 20px;
+                border-radius: 24px;
+            }
+        }
+
+        .portfolio {
+            &-content {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 32px;
+            }
+
+            h2 {
+                max-width: 100%;
+                margin-bottom: 24px;
+            }
+
+            .cta {
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+
+            .tags-list {
+                justify-content: flex-start;
+                margin-top: 24px;
+            }
+
+            .tag-item {
+                padding: 10px 16px;
+                font-size: 16px;
+            }
+
+            h4 {
+                font-size: 26px;
+                text-align: left;
+            }
+
+            &-bottom__title {
+                margin-bottom: 16px;
+
+                &-link {
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 12px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                text-align: left;
+            }
+        }
+
+        .reviews {
+            padding: 48px 0;
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+
+            &-card {
+                padding: 20px 16px;
+
+                &__img {
+                    width: 48px;
+                    height: 48px;
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        .project-idea {
+            .subscribe-form {
+                padding: 8px;
+
+                &__icon {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 8px;
+                }
+
+                &__input {
+                    font-size: 14px;
+                }
+
+                &__btn {
+                    padding: 14px 16px;
+                    font-size: 16px;
+                    margin-left: 8px;
+                }
+            }
+
+            .achievements {
+                flex-direction: column;
+                align-items: flex-start;
+
+                &__item {
+                    margin: 0;
+
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__icon {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .ticker {
+            height: 100px;
+
+            &__line {
+                padding: 16px 0;
+            }
+
+            &__group {
+                padding-right: 20px;
+
+                > :not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                span {
+                    font-size: 24px;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .blog-post {
+            &-text {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 32px;
+            }
+
+            h2 {
+                max-width: 100%;
+                margin-bottom: 24px;
+            }
+
+            .cta {
+                align-self: flex-start;
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+
+            &-card {
+                &__link {
+                    width: 64px;
+                    height: 64px;
+
+                    .icon {
+                        width: 28px;
+                    }
+                }
+
+                &__body {
+                    padding-top: 24px;
+                }
+
+                &__tag {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+
+                &__meta {
+                    flex-wrap: wrap;
+                    font-size: 14px;
+                    margin-bottom: 16px;
+                }
+
+                &__title {
+                    font-size: 24px;
+                }
             }
         }
     }

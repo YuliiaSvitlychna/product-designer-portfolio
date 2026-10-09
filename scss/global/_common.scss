@@ -37,6 +37,7 @@ a, button, input[type="button"], input[type="submit"] {
   
 .container {
     max-width: 1300px;
+    width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -58,7 +59,6 @@ p {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        gap: 12px;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -69,6 +69,10 @@ p {
             width: 15px;
             height: 15px;
             transition: all 0.3s ease;
+
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
 
             button {
                 width: 100%;
@@ -113,5 +117,19 @@ p {
         .slick-dots li.slick-active button {
             background-color: $color-text;
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    section {
+        scroll-margin-top: 24px;
+    }
+
+    .slider-dots {
+        margin-top: 28px;
     }
 }

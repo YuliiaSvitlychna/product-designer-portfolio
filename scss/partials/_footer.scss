@@ -84,12 +84,13 @@
     &__socials {
         display: flex;
         align-items: center;
-        gap: 16px;
   
         a {
-            // color: $color-background;
-            // font-size: 18px;
             transition: color 0.3s ease, transform 0.2s ease;
+            
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
 
             &:hover {
                 color: $color-accent-dark;
@@ -220,35 +221,160 @@
     }
 }
   
-  @media (max-width: 1200px) {
-    .footer__main {
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+@media screen and (max-width: 1200px) {
+    .footer {
+        &__inner {
+            padding: 48px 32px 24px;
+        }
+
+        &__top {
+            margin-bottom: 40px;
+        }
+
+        &__title {
+            font-size: 48px;
+        }
+
+        &__cta-btn {
+            padding: 14px 24px;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-left: 24px;
+        }
+
+        &__main {
+            flex-wrap: wrap;
+        }
+
+        &__info {
+            width: 45%;
+            padding-right: 32px;
+        }
+
+        &__nav-col {
+            width: 25%;
+            padding-right: 16px;
+        }
+
+        &__contact-col {
+            width: 30%;
+        }
+
+        &__description {
+            font-size: 16px;
+        }
+
+        &__subscribe {
+            width: 100%;
+            min-width: 0;
+            margin-top: 32px;
+        }
+
+        &__form {
+            max-width: 480px;
+
+            input {
+                min-width: 0;
+            }
+        }
+
+        &__bottom {
+            font-size: 14px;
+        }
     }
-  }
-  
-  @media (max-width: 768px) {
-    .footer__inner {
-      padding: 40px 24px;
+}
+
+@media screen and (max-width: 991px) {
+    .footer {
+        &__title {
+            font-size: 40px;
+        }
+
+        &__info {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 32px;
+        }
+
+        &__description {
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        &__nav-col,
+        &__contact-col {
+            width: 50%;
+        }
+
+        &__bottom {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__copyright {
+            margin-bottom: 16px;
+        }
     }
-  
-    .footer__top {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        padding: 0;
+
+        &__inner {
+            padding: 40px 24px 24px;
+            border-radius: 32px 32px 0 0;
+        }
+
+        &__top {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        &__title {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        &__cta-btn {
+            margin-left: 0;
+            font-size: 18px;
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        &__divider {
+            margin: 32px 0;
+        }
+
+        &__logo img {
+            height: 60px;
+        }
+
+        &__heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        &__list li {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            a {
+                font-size: 14px;
+                overflow-wrap: anywhere;
+            }
+        }
+
+        &__links {
+            flex-wrap: wrap;
+            justify-content: center;
+            line-height: 1.6;
+        }
     }
-  
-    .footer__title {
-      font-size: 40px;
-    }
-  
-    .footer__main {
-      grid-template-columns: 1fr;
-    }
-  
-    .footer__bottom {
-      flex-direction: column;
-      gap: 16px;
-      text-align: center;
-    }
-  }
+}

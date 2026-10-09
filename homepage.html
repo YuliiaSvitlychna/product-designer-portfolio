@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product designer</title>
+    <title>Jenny Miller — Product Designer</title>
     <link rel="stylesheet" href="css/styles-min.css"/>
 </head>
 <body>
     <header class="page-header">
         <div class="container">
-            <div class="header-nav-left">
-                <ul>
-                    <li class="main-nav"><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Service</a></li>
-                </ul>
-            </div>
             <div class="header-logo">
                 <a href="#hero">
                     <img src="images/logo.svg" alt="logo" />
                 </a>
             </div>
-            <div class="header-nav-right">
+            <button class="header-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="header-nav-left header-nav-right">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="header-nav-left" class="header-nav-left">
+                <ul>
+                    <li class="main-nav"><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+            <div id="header-nav-right" class="header-nav-right">
                 <ul>
                     <li><a href="#experience">Resume</a></li>
-                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -50,21 +55,21 @@
             <div class="container">
                 <div class="services-text">
                     <h2>My <span>Services</span></h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                    <p>From early sketches to polished interfaces, I design websites and digital products
+                        that help people find what they need and take the next step with confidence.</p>
                 </div>
                 <div id="services-carousel">
                     <div class="services-item">
                         <article class="services-card">
                             <div class="services-card__top">
                                 <div class="services-card__header">
-                                    <h3 class="services-card__title">UI/ UX Design</h3>
+                                    <h3 class="services-card__title">UI/UX Design</h3>
                                 </div>
                             </div>
                             <div class="services-card__preview">
                                 <img src="images/card-1.png" alt="UI/UX Design preview" />
                             </div>
-                            <a href="#" class="services-card__link" aria-label="Детальніше про UI/UX Design">
+                            <a href="#" class="services-card__link" aria-label="Explore UI/UX design">
                                 <img class="icon" src="images/arrow-blue.svg"/>
                             </a>
                         </article>
@@ -79,7 +84,7 @@
                             <div class="services-card__preview">
                                 <img src="images/card-2.png" alt="Web Design preview" />
                             </div>
-                            <a href="#" class="services-card__link" aria-label="Детальніше про Web Design">
+                            <a href="#" class="services-card__link" aria-label="Explore web design">
                                 <img class="icon" src="images/arrow-blue.svg"/>
                             </a>
                         </article>
@@ -94,7 +99,7 @@
                             <div class="services-card__preview">
                                 <img src="images/card-3.png" alt="Landing Page preview" />
                             </div>
-                            <a href="#" class="services-card__link" aria-label="Детальніше про Landing Page">
+                            <a href="#" class="services-card__link" aria-label="Explore landing page design">
                                 <img class="icon" src="images/arrow-blue.svg"/>
                             </a>
                         </article>
@@ -103,13 +108,13 @@
                         <article class="services-card">
                             <div class="services-card__top">
                                 <div class="services-card__header">
-                                    <h3 class="services-card__title">Landing Page</h3>
+                                    <h3 class="services-card__title">Design Systems</h3>
                                 </div>
                             </div>
                             <div class="services-card__preview">
-                                <img src="images/card-3.png" alt="Landing Page preview" />
+                                <img src="images/card-3.png" alt="Design system preview" />
                             </div>
-                            <a href="#" class="services-card__link" aria-label="Детальніше про Landing Page">
+                            <a href="#" class="services-card__link" aria-label="Explore design systems">
                                 <img class="icon" src="images/arrow-blue.svg"/>
                             </a>
                         </article>
@@ -123,45 +128,42 @@
                 <h2>My <span>Work Experience</span></h2>
                 
                 <div class="timeline">
-                    <!-- Рядок 1 -->
                     <div class="timeline-item">
                         <div class="timeline-left">
-                            <h3>Cognizant, Mumbai</h3>
-                            <p>Sep 2016 - July 2020</p>
+                            <h3>Berlin, Germany</h3>
+                            <p>Sep 2016 - Jul 2020</p>
                         </div>
                         <div class="timeline-marker"></div>
                         <div class="timeline-right">
                             <h3>Experience Designer</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                            <p>Mapped customer journeys and tested early prototypes for web products.
+                                Turned research findings into clearer navigation and simpler onboarding.</p>
                         </div>
                     </div>
         
-                    <!-- Рядок 2 (з темним маркером) -->
                     <div class="timeline-item dark">
                         <div class="timeline-left">
-                            <h3>Sugee Pvt limited, Mumbai</h3>
-                            <p>Sep 2020 - July 2026</p>
+                            <h3>Amsterdam, Netherlands</h3>
+                            <p>Sep 2020 - Jul 2023</p>
                         </div>
                         <div class="timeline-marker"></div>
                         <div class="timeline-right">
                             <h3>UI/UX Designer</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                            <p>Designed responsive interfaces for booking and shopping experiences.
+                                Built reusable components and worked with developers from concept to launch.</p>
                         </div>
                     </div>
         
-                    <!-- Рядок 3 -->
                     <div class="timeline-item">
                         <div class="timeline-left">
-                            <h3>Cinetstox, Mumbai</h3>
-                            <p>Sep 2026</p>
+                            <h3>Copenhagen, Denmark</h3>
+                            <p>Sep 2023 - Present</p>
                         </div>
                         <div class="timeline-marker"></div>
                         <div class="timeline-right">
                             <h3>Lead UX Designer</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                            <p>Lead discovery workshops and guide product design from research to delivery.
+                                Support the design team and keep interfaces consistent across the product.</p>
                         </div>
                     </div>
                 </div>
@@ -174,16 +176,16 @@
                 </div>
                 <div class="why-choose-me-content">
                     <h2>Why <span>Hire me</span>?</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                    <p>I listen closely, ask useful questions, and make complex ideas easier to use.
+                        You get a thoughtful design partner who stays involved from the first brief to the final handoff.</p>
                     <div class="why-choose-me-content__bottom">
                         <div class="item-1">
-                            <h3>450+</h3>
-                            <div class="why-choose-me-content__text">Project Completed</div>
+                            <h3>60+</h3>
+                            <div class="why-choose-me-content__text">Projects Designed</div>
                         </div>
                         <div class="item-2">
-                            <h3>450+</h3>
-                            <div class="why-choose-me-content__text">Project Completed</div>
+                            <h3>10+</h3>
+                            <div class="why-choose-me-content__text">Years of Experience</div>
                         </div>
                     </div>
                     <a class="cta">Hire me</a>
@@ -193,7 +195,7 @@
         <section id="portfolio-section" class="portfolio">
             <div class="container">
                 <div class="portfolio-content">
-                    <h2>Lets have a look at my <span>Portfolio</span></h2>
+                    <h2>Let's have a look at my <span>Portfolio</span></h2>
                     <a class="cta">See all</a>
                 </div>
                 <div id="portfolio">
@@ -221,12 +223,12 @@
                 <div class="portfolio-bottom">
                     <div class="portfolio-bottom__title">
                         <h4>Lirante - Food Delivery Solution</h4>
-                        <div href="#" class="portfolio-bottom__title-link" aria-label="Детальніше про Food Dilvery Solution">
+                        <div href="#" class="portfolio-bottom__title-link" aria-label="Explore the Lirante food delivery project">
                             <img class="icon" src="images/arrow-orange.svg"/>
                         </div>
                     </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                    <p>A food delivery experience that makes choosing a meal, placing an order, and tracking delivery simple.
+                        The design pairs clear menus with a short checkout and helpful order updates.</p>
                 </div>
             </div>
         </section>
@@ -234,8 +236,8 @@
             <div class="container">
                 <div class="reviews-text">
                     <h2>Testimonials That Speak<span> to My Results</span></h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
+                    <p>Good design starts with a good working relationship.
+                        Here is how clients and collaborators describe the process, the communication, and the finished work.</p>
                 </div>
                 <div id="reviews-carousel">
                     <div class="reviews-item">
@@ -243,16 +245,16 @@
                             <div class="reviews-card__author">
                                 <div class="reviews-card__img" style="background-image: url('./images/reviews-img-1.jpg');"></div>
                                 <div class="reviews-card__wrapper">
-                                    <div class="reviews-card__name">Name Surname</div>
-                                    <div class="reviews-card__position">CEO, Lirante</div>
+                                    <div class="reviews-card__name">Lucas Martin</div>
+                                    <div class="reviews-card__position">Founder, Lirante</div>
                                 </div>
                             </div>
                             <div class="reviews-card__rating">
                                 <div class="reviews-card__stars" style="background-image: url('./images/reviews-stars.svg');"></div>
                                 <span class="reviews-card__score">5.0</span>
                             </div>
-                            <div class="reviews-card__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since 1966.</div>
+                            <div class="reviews-card__text">Jenny made our ordering flow much easier to follow.
+                                She explained every design decision clearly and gave our team a practical set of screens to build.</div>
                         </div>
                     </div>
                     <div class="reviews-item">
@@ -260,16 +262,16 @@
                             <div class="reviews-card__author">
                                 <div class="reviews-card__img" style="background-image: url('./images/reviews-img-2.jpg');"></div>
                                 <div class="reviews-card__wrapper">
-                                    <div class="reviews-card__name">Name Surname</div>
-                                    <div class="reviews-card__position">CEO, Lirante</div>
+                                    <div class="reviews-card__name">Emma Weber</div>
+                                    <div class="reviews-card__position">Product Lead, Bright</div>
                                 </div>
                             </div>
                             <div class="reviews-card__rating">
                                 <div class="reviews-card__stars" style="background-image: url('./images/reviews-stars.svg');"></div>
                                 <span class="reviews-card__score">5.0</span>
                             </div>
-                            <div class="reviews-card__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since 1966.</div>
+                            <div class="reviews-card__text">The collaboration felt organised from the first workshop.
+                                Jenny asked the right questions, welcomed feedback, and helped us turn a rough idea into a focused product.</div>
                         </div>
                     </div>
                     <div class="reviews-item">
@@ -277,16 +279,16 @@
                             <div class="reviews-card__author">
                                 <div class="reviews-card__img" style="background-image: url('./images/reviews-img-3.jpg');"></div>
                                 <div class="reviews-card__wrapper">
-                                    <div class="reviews-card__name">Name Surname</div>
-                                    <div class="reviews-card__position">CEO, Lirante</div>
+                                    <div class="reviews-card__name">Sophie Larsen</div>
+                                    <div class="reviews-card__position">Director, North Studio</div>
                                 </div>
                             </div>
                             <div class="reviews-card__rating">
                                 <div class="reviews-card__stars" style="background-image: url('./images/reviews-stars.svg');"></div>
                                 <span class="reviews-card__score">5.0</span>
                             </div>
-                            <div class="reviews-card__text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since 1966.</div>
+                            <div class="reviews-card__text">Jenny balances attention to detail with a clear view of the whole experience.
+                                Her component library made the handoff smoother and helped us keep the website consistent.</div>
                         </div>
                     </div>
                 </div>
@@ -295,7 +297,7 @@
         </section>
         <section id="contact" class="project-idea">
             <div class="container">
-                <h2>Have an Awesome Project Idea? <span>Let’s Discuss</span></h2>
+                <h2>Have a Project in Mind? <span>Let’s Discuss</span></h2>
                 <form class="subscribe-form">
                     <div class="subscribe-form__icon">
                         <img src="./images/mail-icon.svg" alt="Email" />
@@ -316,12 +318,12 @@
                   
                     <div class="achievements__item">
                       <img src="./images/award-icon.svg" alt="Awards" class="achievements__icon" />
-                      <span class="achievements__text">25+ Winning Awards</span>
+                      <span class="achievements__text">10+ Years in Design</span>
                     </div>
                   
                     <div class="achievements__item">
                       <img src="./images/check-icon.svg" alt="Certified" class="achievements__icon" />
-                      <span class="achievements__text">Certified Product Designer</span>
+                      <span class="achievements__text">Research to Delivery</span>
                     </div>
                   </div>
             </div>
@@ -371,26 +373,26 @@
         <section class="blog-post">
             <div class="container">
                 <div class="blog-post-text">
-                    <h2>From my blog post</h2>
+                    <h2>From my design journal</h2>
                     <a class="cta">See All</a>
                 </div>
                 <div id="blog-post-carousel">
                     <div class="blog-post-item">
                         <article class="blog-post-card">
                             <div class="blog-post-card__preview">
-                                <img src="images/blog-3.png" alt="UI/UX Design preview" />
-                                <a href="#" class="blog-post-card__link" aria-label="Детальніше про UI/UX Design">
+                                <img src="images/blog-3.png" alt="UI/UX Design article preview" />
+                                <a href="#" class="blog-post-card__link" aria-label="Read: Designing Interfaces That Feel Easy to Use">
                                     <img class="icon" src="images/arrow-blue.svg"/>
                                 </a>
                             </div>
                             <div class="blog-post-card__body">
-                                <span class="blog-post-card__tag">UI/ UX Design</span>
+                                <span class="blog-post-card__tag">UI/UX Design</span>
                                 <div class="blog-post-card__meta">
-                                    <span class="blog-post-card__author">Jayesh Patil</span>
-                                    <span class="blog-post-card__date">10 Nov, 2026</span>
+                                    <span class="blog-post-card__author">Jenny Miller</span>
+                                    <span class="blog-post-card__date">28 Sep, 2026</span>
                                 </div>
                                 <h3 class="blog-post-card__title">
-                                    <a href="#">Design Unraveled: Behind the Scenes of UI/UX Magic</a>
+                                    <a href="#">Designing Interfaces That Feel Easy to Use</a>
                                 </h3>
                             </div>
                         </article>
@@ -398,19 +400,19 @@
                     <div class="blog-post-item">
                         <article class="blog-post-card">
                             <div class="blog-post-card__preview">
-                                <img src="images/blog-2.png" alt="Web Design preview" />
-                                <a href="#" class="blog-post-card__link" aria-label="Детальніше про Web Design">
+                                <img src="images/blog-2.png" alt="Web Design article preview" />
+                                <a href="#" class="blog-post-card__link" aria-label="Read: What Makes a Landing Page Work on Mobile">
                                     <img class="icon" src="images/arrow-blue.svg"/>
                                 </a>
                             </div>
                             <div class="blog-post-card__body">
-                                <span class="blog-post-card__tag">UI/ UX Design</span>
+                                <span class="blog-post-card__tag">Web Design</span>
                                 <div class="blog-post-card__meta">
-                                    <span class="blog-post-card__author">Jayesh Patil</span>
-                                    <span class="blog-post-card__date">10 Nov, 2026</span>
+                                    <span class="blog-post-card__author">Jenny Miller</span>
+                                    <span class="blog-post-card__date">15 Sep, 2026</span>
                                 </div>
                                 <h3 class="blog-post-card__title">
-                                    <a href="#">Design Unraveled: Behind the Scenes of UI/UX Magic</a>
+                                    <a href="#">What Makes a Landing Page Work on Mobile</a>
                                 </h3>
                             </div>
                         </article>
@@ -418,19 +420,19 @@
                     <div class="blog-post-item">
                         <article class="blog-post-card">
                             <div class="blog-post-card__preview">
-                                <img src="images/blog-3.png" alt="Landing Page preview" />
-                                <a href="#" class="blog-post-card__link" aria-label="Детальніше про Landing Page">
+                                <img src="images/blog-3.png" alt="UX Research article preview" />
+                                <a href="#" class="blog-post-card__link" aria-label="Read: Five Questions to Ask Before Your First Prototype">
                                     <img class="icon" src="images/arrow-blue.svg"/>
                                 </a>
                             </div>
                             <div class="blog-post-card__body">
-                                <span class="blog-post-card__tag">UI/ UX Design</span>
+                                <span class="blog-post-card__tag">UX Research</span>
                                 <div class="blog-post-card__meta">
-                                    <span class="blog-post-card__author">Jayesh Patil</span>
-                                    <span class="blog-post-card__date">10 Nov, 2026</span>
+                                    <span class="blog-post-card__author">Jenny Miller</span>
+                                    <span class="blog-post-card__date">02 Sep, 2026</span>
                                 </div>
                                 <h3 class="blog-post-card__title">
-                                    <a href="#">Design Unraveled: Behind the Scenes of UI/UX Magic</a>
+                                    <a href="#">Five Questions to Ask Before Your First Prototype</a>
                                 </h3>
                             </div>
                         </article>
@@ -438,19 +440,19 @@
                     <div class="blog-post-item">
                         <article class="blog-post-card">
                             <div class="blog-post-card__preview">
-                                <img src="images/blog-2.png" alt="UI/UX Design preview" />
-                                <a href="#" class="blog-post-card__link" aria-label="Детальніше про UI/UX Design">
+                                <img src="images/blog-2.png" alt="Design Systems article preview" />
+                                <a href="#" class="blog-post-card__link" aria-label="Read: Building a Component Library Your Team Can Use">
                                     <img class="icon" src="images/arrow-blue.svg"/>
                                 </a>
                             </div>
                             <div class="blog-post-card__body">
-                                <span class="blog-post-card__tag">UI/ UX Design</span>
+                                <span class="blog-post-card__tag">Design Systems</span>
                                 <div class="blog-post-card__meta">
-                                    <span class="blog-post-card__author">Jayesh Patil</span>
-                                    <span class="blog-post-card__date">10 Nov, 2026</span>
+                                    <span class="blog-post-card__author">Jenny Miller</span>
+                                    <span class="blog-post-card__date">20 Aug, 2026</span>
                                 </div>
                                 <h3 class="blog-post-card__title">
-                                    <a href="#">Design Unraveled: Behind the Scenes of UI/UX Magic</a>
+                                    <a href="#">Building a Component Library Your Team Can Use</a>
                                 </h3>
                             </div>
                         </article>
@@ -458,19 +460,19 @@
                     <div class="blog-post-item">
                         <article class="blog-post-card">
                             <div class="blog-post-card__preview">
-                                <img src="images/blog-3.png" alt="Web Design preview" />
-                                <a href="#" class="blog-post-card__link" aria-label="Детальніше про Web Design">
+                                <img src="images/blog-3.png" alt="Product Design article preview" />
+                                <a href="#" class="blog-post-card__link" aria-label="Read: Turning User Feedback into Better Product Decisions">
                                     <img class="icon" src="images/arrow-blue.svg"/>
                                 </a>
                             </div>
                             <div class="blog-post-card__body">
-                                <span class="blog-post-card__tag">UI/ UX Design</span>
+                                <span class="blog-post-card__tag">Product Design</span>
                                 <div class="blog-post-card__meta">
-                                    <span class="blog-post-card__author">Jayesh Patil</span>
-                                    <span class="blog-post-card__date">10 Nov, 2026</span>
+                                    <span class="blog-post-card__author">Jenny Miller</span>
+                                    <span class="blog-post-card__date">06 Aug, 2026</span>
                                 </div>
                                 <h3 class="blog-post-card__title">
-                                    <a href="#">Design Unraveled: Behind the Scenes of UI/UX Magic</a>
+                                    <a href="#">Turning User Feedback into Better Product Decisions</a>
                                 </h3>
                             </div>
                         </article>
@@ -478,19 +480,19 @@
                     <div class="blog-post-item">
                         <article class="blog-post-card">
                             <div class="blog-post-card__preview">
-                                <img src="images/blog-2.png" alt="Landing Page preview" />
-                                <a href="#" class="blog-post-card__link" aria-label="Детальніше про Landing Page">
+                                <img src="images/blog-2.png" alt="Prototyping article preview" />
+                                <a href="#" class="blog-post-card__link" aria-label="Read: From Wireframe to Prototype: Testing the Right Ideas">
                                     <img class="icon" src="images/arrow-blue.svg"/>
                                 </a>
                             </div>
                             <div class="blog-post-card__body">
-                                <span class="blog-post-card__tag">UI/ UX Design</span>
+                                <span class="blog-post-card__tag">Prototyping</span>
                                 <div class="blog-post-card__meta">
-                                    <span class="blog-post-card__author">Jayesh Patil</span>
-                                    <span class="blog-post-card__date">10 Nov, 2026</span>
+                                    <span class="blog-post-card__author">Jenny Miller</span>
+                                    <span class="blog-post-card__date">23 Jul, 2026</span>
                                 </div>
                                 <h3 class="blog-post-card__title">
-                                    <a href="#">Design Unraveled: Behind the Scenes of UI/UX Magic</a>
+                                    <a href="#">From Wireframe to Prototype: Testing the Right Ideas</a>
                                 </h3>
                             </div>
                         </article>
@@ -503,7 +505,7 @@
     <footer class="footer">
         <div class="footer__inner">
             <div class="footer__top">
-              <h2 class="footer__title">Lets Connect there</h2>
+              <h2 class="footer__title">Let's Create Together</h2>
               <a href="#" class="footer__cta-btn">
                 Hire me
                 <img src="images/arrow.svg" alt="Arrow" />
@@ -516,7 +518,8 @@
                   <img src="images/logo.svg" alt="JCREA Logo" />
                 </a>
                 <p class="footer__description">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+                  I'm Jenny, a product designer working with teams across Europe.
+                  I turn research and ideas into useful digital experiences, from a first prototype to a website ready to launch.
                 </p>
                 <div class="footer__socials">
                     <a href="#" aria-label="YouTube" class="icon-youtube">
@@ -537,18 +540,18 @@
                 <h3 class="footer__heading">Navigation</h3>
                 <ul class="footer__list">
                   <li><a href="#hero">Home</a></li>
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#services">Service</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
                   <li><a href="#experience">Resume</a></li>
-                  <li><a href="#portfolio">Project</a></li>
+                  <li><a href="#portfolio">Projects</a></li>
                 </ul>
               </div>
               <div class="footer__contact-col">
                 <h3 class="footer__heading">Contact</h3>
                 <ul class="footer__list">
-                  <li><a href="tel:+917738443636">+380000000000</a></li>
-                  <li><a href="mailto:Jaycrea36@gmail.com">jenny@gmail.com</a></li>
-                  <li><a href="#">portfolio-jcrea.com</a></li>
+                  <li><a href="tel:+380000000000">+380000000000</a></li>
+                  <li><a href="mailto:jenny@example.com">jenny@example.com</a></li>
+                  <li><a href="#">jcrea.example</a></li>
                 </ul>
               </div>
               <div class="footer__subscribe">
@@ -563,7 +566,7 @@
             </div>
             <div class="footer__divider"></div>
             <div class="footer__bottom">
-              <p class="footer__copyright">Copyright© 2023 Jayesh. All Rights Reserved.</p>
+              <p class="footer__copyright">Copyright© 2026 Jenny Miller. All Rights Reserved.</p>
               <div class="footer__links">
                 <a href="#">User Terms & Conditions</a>
                 <span>|</span>
